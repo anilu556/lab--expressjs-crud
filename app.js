@@ -14,13 +14,13 @@ app.use(morgan('combined'));
 
 app.use('/api', api);
 
-// app.get('/', (req, res) => {
-//     res.send('Hello root')
-// })
+app.get('/', (req, res) => {
+    res.send('Hello root')
+})
 
-// app.use('/api', (req, res) => {
-//     res.send('Endpoint /api OK')
-// })
+app.use('/api', (req, res) => {
+    res.send('Endpoint /api OK')
+})
 
 app.use((req, res) => {
     const ERROR = {message: '404. Not Found'};
